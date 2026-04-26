@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Version 2: Modern Tech Portfolio - Showcase</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#22005d",
+                      "surface-container": "#f2ecf4",
+                      "inverse-on-surface": "#f5eff7",
+                      "on-tertiary-container": "#503d00",
+                      "surface-container-high": "#ece6ee",
+                      "on-secondary-container": "#645a7d",
+                      "on-primary-fixed-variant": "#4f378a",
+                      "tertiary-container": "#c9a74d",
+                      "on-primary-container": "#e0d2ff",
+                      "tertiary": "#765b00",
+                      "secondary-fixed-dim": "#cdc0e9",
+                      "surface-dim": "#ded8e0",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#6750a4",
+                      "primary-fixed-dim": "#cfbcff",
+                      "outline": "#7a7582",
+                      "on-surface": "#1d1b20",
+                      "surface-container-low": "#f8f2fa",
+                      "surface-container-highest": "#e6e0e9",
+                      "secondary": "#63597c",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#1f1635",
+                      "background": "#fdf7ff",
+                      "surface-tint": "#6750a4",
+                      "surface-variant": "#e6e0e9",
+                      "on-background": "#1d1b20",
+                      "primary-fixed": "#e9ddff",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#494551",
+                      "tertiary-fixed": "#ffdf93",
+                      "surface-bright": "#fdf7ff",
+                      "on-secondary-fixed-variant": "#4b4263",
+                      "inverse-primary": "#cfbcff",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#322f35",
+                      "tertiary-fixed-dim": "#e7c365",
+                      "secondary-fixed": "#e9ddff",
+                      "on-tertiary-fixed-variant": "#594400",
+                      "secondary-container": "#e1d4fd",
+                      "surface": "#fdf7ff",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#4f378a",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#cbc4d2",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "md": "2rem",
+                      "container-max": "1440px",
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "lg": "4rem",
+                      "xs": "0.5rem",
+                      "sm": "1rem",
+                      "xl": "8rem"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "heading-lg": [
+                              "Inter"
+                      ],
+                      "heading-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "display-2xl": [
+                              "Inter"
+                      ],
+                      "display-xl": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "heading-lg": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "heading-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-2xl": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-xl": [
+                              "60px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 transition-opacity duration-300 opacity-100">
+<div class="max-w-screen-xl mx-auto px-12 flex justify-between items-center h-24 lg:px-24 xl:px-40">
+<div class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
+                ALEX DEV
+            </div>
+<nav class="hidden md:flex gap-8">
+<a class="font-sans tracking-tight text-sm uppercase font-medium text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#">Work</a>
+</nav>
+<button class="font-sans tracking-tight text-sm uppercase font-medium text-[#6750A4] dark:text-[#9179d3] hover:text-[#6750A4] transition-colors duration-500 flex items-center gap-2">
+                Contact <span class="material-symbols-outlined" style="font-variation-settings: 'wght' 400;">arrow_forward</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-xl">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-gutter mb-xl mt-lg lg:px-24 xl:px-40">
+<div class="grid grid-cols-12 gap-gutter items-end min-h-[409px]">
+<div class="col-span-12 md:col-span-9 lg:col-span-8">
+<h1 class="font-display-2xl text-display-2xl text-on-surface mb-md">
+                        Full-Stack Developer. Creating modern solutions for real problems.
+                    </h1>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 md:pb-sm">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Specializing in high-performance web applications and design systems. 5+ years translating complex requirements into refined, accessible interfaces.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Projects Showcase -->
+<section class="max-w-[1440px] mx-auto px-gutter space-y-xl lg:px-24 xl:px-40">
+<!-- Project 1: Carbon Footprint -->
+<article class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center pr-md">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-sm w-fit">
+                        Data Visualization
+                    </div>
+<h2 class="font-heading-lg text-heading-lg text-on-surface mb-sm">Carbon Footprint Tracker</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        Developed for UNCPBA to aggregate and visualize institutional carbon emissions. The challenge was transforming dense environmental data sets into an actionable dashboard for administration. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                        By establishing a clear typographic hierarchy and utilizing interactive chart components, the platform enables stakeholders to pinpoint exact areas for emission reduction.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary hover:text-primary-container font-label-sm text-label-sm transition-colors border-b border-primary/30 pb-1 w-fit" href="#">
+                        VIEW CASE STUDY <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="col-span-12 lg:col-span-7 order-1 lg:order-2 mb-md lg:mb-0 relative group">
+<!-- Project Demo Container with subtle glow/border using config colors -->
+<div class="relative rounded-xl overflow-hidden aspect-video bg-surface-container-lowest border-[0.5px] border-primary-fixed-dim ring-1 ring-primary-container/10">
+<img alt="Dashboard interface showing complex data visualizations, charts, and graphs in a clean, minimal UI with a light color palette" class="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-700" data-alt="Dashboard interface showing complex data visualizations, charts, and graphs in a clean, minimal UI with a light color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmRUkuo9Tz7w7ri8blXuSXRkFzfV_7xahNTCMvLc499_rLwDzc5wlk6zkiq_JlC9V3IIb6gyrjuBibqF5vNrOALoGbG6PrPIRADTbEXlDZC5-efDKezBmrs6o4mUyGC7QGE_pK1tlTk82dOuiBrI2wAXjuf9iqQEeU4QVcrbjwECYnZesU6GOysXRMvHUN-DE4gv6skYlR9KzsqR_WiYklrPawihbZJxeZmDnpg4t5fbb1UWIslQv5r2eKkACr5xYwsEwUfwnH73pq"/>
+<!-- Simulated Video Play Button overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-16 h-16 rounded-full bg-surface/80 backdrop-blur-sm border border-outline-variant flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'opsz' 48; font-size: 32px;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: Sales Platform -->
+<article class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-7 mb-md lg:mb-0 relative group">
+<!-- Project Demo Container with subtle glow/border using config colors -->
+<div class="relative rounded-xl overflow-hidden aspect-video bg-surface-container-lowest border-[0.5px] border-primary-fixed-dim ring-1 ring-primary-container/10">
+<img alt="Clean, modern e-commerce or sales platform interface showing product analytics and inventory management on a sleek digital display" class="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-700" data-alt="Clean, modern e-commerce or sales platform interface showing product analytics and inventory management on a sleek digital display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaKmijo5vqWufDI_5ji2A5AC7eVHs7GIQd4gmM6_1_anDFKsnquLbjiR8a0hJaFycc8SMNx-H8Lg5eSfpAA3BSqWVoBU0scs27p8io1tForltNPJUZzvuYRMQTDL7mCJZCtmQInNhPSxp51-LnoajAT4TBEMrvzNsS9k01xjRO4w-oYwEUgGNe45dAr9E9hNdGsYyGoGwwY4kpR_c0oyw_WZl4axDrRWApYqD-OCvwpGB4qqENk8CU6CsEUE4AqmWb3mQzAY-E9-yK"/>
+<!-- Simulated Video Play Button overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-16 h-16 rounded-full bg-surface/80 backdrop-blur-sm border border-outline-variant flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'opsz' 48; font-size: 32px;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 flex flex-col justify-center pl-0 lg:pl-md">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-sm w-fit">
+                        Enterprise App
+                    </div>
+<h2 class="font-heading-lg text-heading-lg text-on-surface mb-sm">B2B Sales Platform</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        A comprehensive overhaul of an outdated legacy CRM. The goal was to reduce onboarding time for new sales representatives while increasing data entry accuracy.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                        We implemented a focused, distraction-free interface using strict component states and guided input flows, resulting in a 40% decrease in task completion time.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary hover:text-primary-container font-label-sm text-label-sm transition-colors border-b border-primary/30 pb-1 w-fit" href="#">
+                        VIEW CASE STUDY <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+<!-- Services & Technologies Section -->
+<section class="max-w-[1440px] mx-auto px-gutter mt-xl mb-xl lg:px-24 xl:px-40">
+<div class="text-center mb-12">
+<h2 class="font-display-xl text-display-xl text-on-surface mb-sm">What I Do</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">I offer comprehensive development services across mobile and web platforms</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+<!-- Card 1 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[40px] text-[#6750A4] mb-6 block" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'opsz' 40;">smartphone</span>
+<h3 class="font-heading-md text-heading-md text-on-surface mb-4">Mobile Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Building native and cross-platform mobile apps with React Native and Flutter</p>
+</div>
+<!-- Card 2 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[40px] text-[#6750A4] mb-6 block" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'opsz' 40;">language</span>
+<h3 class="font-heading-md text-heading-md text-on-surface mb-4">Web Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Creating modern web applications with Next.js, React, and TypeScript</p>
+</div>
+<!-- Card 3 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[40px] text-[#6750A4] mb-6 block" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'opsz' 40;">electric_bolt</span>
+<h3 class="font-heading-md text-heading-md text-on-surface mb-4">Full-Stack Solutions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">End-to-end development from backend APIs to frontend interfaces</p>
+</div>
+</div>
+<div class="text-center mb-12">
+<h2 class="font-display-xl text-display-xl text-on-surface mb-sm">Technologies I Work With</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A diverse toolkit for building scalable and modern applications</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">React Native</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">Flutter</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">Next.js</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">React</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">TypeScript</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">Node.js</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">Django</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">Java</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">Firebase</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">MongoDB</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">PostgreSQL</span>
+<span class="px-6 py-3 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md">Tailwind CSS</span>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-[1440px] mx-auto px-gutter mt-xl text-center lg:px-24 xl:px-40">
+<h2 class="font-display-xl text-display-xl text-on-surface mb-sm">Get in Touch</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Let's build something great together.</p>
+<a class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-on-primary rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors font-body-md text-body-md font-medium" href="mailto:hello@alexdev.com">
+        hello@alexdev.com <span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-32 border-t border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950 ease-in-out duration-300 mt-xl">
+<div class="max-w-screen-xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-8 lg:px-24 xl:px-40">
+<div class="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
+                © 2024 Alex Dev. Built with precision.
+            </div>
+<nav class="flex gap-6">
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-400 dark:text-zinc-600 hover:text-[#6750A4] transition-colors duration-300" href="#">LinkedIn</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-400 dark:text-zinc-600 hover:text-[#6750A4] transition-colors duration-300" href="#">GitHub</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-400 dark:text-zinc-600 hover:text-[#6750A4] transition-colors duration-300" href="#">Layers</a>
+</nav>
+</div>
+</footer>
+</body></html>

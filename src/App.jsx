@@ -1,122 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import Projects from './components/Projects'
+import './index.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="bg-surface text-on-surface font-sans text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+      <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 transition-opacity duration-300">
+        <div className="max-w-screen-xl mx-auto px-12 flex justify-between items-center h-24 lg:px-24 xl:px-40">
+          <div className="text-xl font-bold tracking-tighter text-zinc-900">
+            STEF DEV
+          </div>
 
-      <div className="ticks"></div>
+          <nav className="hidden md:flex gap-8">
+            <a
+              href="#work"
+              className="font-sans tracking-tight text-sm uppercase font-medium text-zinc-900 border-b border-zinc-900 pb-1"
+            >
+              Work
+            </a>
+          </nav>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <a
+            href="mailto:sgilstefania@gmail.com"
+            className="font-sans tracking-tight text-sm uppercase font-medium text-[#6750A4] hover:text-[#4f378a] transition-colors duration-300 flex items-center gap-2"
+          >
+            Contact
+            <span
+              className="material-symbols-outlined"
+              style={{ fontVariationSettings: "'wght' 400", fontSize: '20px' }}
+            >
+              arrow_forward
+            </span>
+          </a>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </header>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <main className="pt-32 pb-xl px-12">
+        <section className="max-w-[1440px] mx-auto px-gutter mb-xl mt-md lg:px-24 xl:px-40">
+          <div className="grid grid-cols-12 gap-gutter items-end min-h-[409px]">
+            <div className="col-span-12 md:col-span-9 lg:col-span-8">
+              <h1 className="text-display-xl font-bold text-on-surface mb-md leading-[1.1] tracking-[-0.04em]">
+                Full-Stack Developer. Creating modern solutions for real problems.
+              </h1>
+            </div>
+            <div className="col-span-12 md:col-span-6 lg:col-span-4 md:pb-sm">
+              <p className="text-body-lg text-on-surface-variant leading-relaxed">
+                Specializing in high-performance web applications and design systems.
+                5+ years translating complex requirements into refined, accessible interfaces.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <Projects />
+      </main>
+    </div>
   )
 }
-
-export default App
