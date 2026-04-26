@@ -1,5 +1,16 @@
 const projects = [
   {
+    id: 2,
+    tag: 'B2B Solutions',
+    title: 'Sales Management Platform',
+    description: [
+      'A centralized management platform for commercial workflows. It includes an interactive CRM with advanced filtering, a real-time inventory engine with automated stock alerts, and a transactional module featuring a split-view interface for simultaneous catalog browsing and order processing.',
+    ],
+    image: '/sales-management.png',
+    imageAlt: 'Sales Management Platform — dashboard showing CRM, inventory and order processing modules',
+    imageLeft: true,
+  },
+  {
     id: 1,
     tag: 'Data Visualization',
     title: 'Carbon Footprint Tracker',
@@ -42,7 +53,7 @@ function ProjectCard({ project }) {
         className={`col-span-12 lg:col-span-7 mb-6 lg:mb-0
           ${project.imageLeft ? 'order-1 lg:order-1' : 'order-1 lg:order-2'}`}
       >
-        <div className="relative rounded-xl overflow-hidden bg-surface-container-lowest border border-primary-fixed-dim/50 ring-1 ring-primary-container/10" style={{ aspectRatio: '16/10' }}>
+        <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-primary-fixed-dim/20 bg-surface-container-lowest">
           <img
             src={project.image}
             alt={project.imageAlt}
@@ -56,11 +67,11 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   return (
-    <section id="work" className="max-w-[1440px] mx-auto px-6 mt-32 mb-32 lg:px-24 xl:px-40">
-      <h2 className="text-[60px] font-semibold text-on-surface tracking-[-0.03em] leading-[1.1] mb-16">
+    <section id="work" className="py-24">
+      <h2 className="text-[38px] font-semibold text-on-surface tracking-[-0.02em] leading-tight mb-16">
         Featured Projects
       </h2>
-      <div className="flex flex-col gap-32">
+      <div className="flex flex-col gap-24">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
