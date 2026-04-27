@@ -3,9 +3,13 @@ import Projects from './components/Projects'
 import './index.css'
 
 const technologies = [
-  'React', 'Next.js', 'TypeScript', 'Node.js',
-  'Django', 'Java', 'Firebase', 'MongoDB', 'PostgreSQL', 'Tailwind CSS',
-]
+  // Frontend & UI
+  'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Vite',
+  // Backend & DB
+  'Node.js', 'Spring Boot', 'Java', 'PostgreSQL', 'MySQL',
+  // Tools & OS
+  'Docker', 'Linux', 'Git/GitHub', 'Postman'
+];
 
 const C = 'max-w-[1200px] mx-auto px-8'
 
