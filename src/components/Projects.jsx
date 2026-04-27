@@ -2,63 +2,75 @@ const projects = [
   {
     id: 2,
     tag: 'B2B Solutions',
+    role: 'Frontend',
+    roleNote: 'Backend by another dev (Spring Boot)',
     title: 'Sales Management Platform',
-    description: [
+    description:
       'A centralized management platform for commercial workflows. It includes an interactive CRM with advanced filtering, a real-time inventory engine with automated stock alerts, and a transactional module featuring a split-view interface for simultaneous catalog browsing and order processing.',
-    ],
+    techs: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
     image: '/sales-management.png',
     imageAlt: 'Sales Management Platform — dashboard showing CRM, inventory and order processing modules',
-    imageLeft: true,
   },
   {
     id: 1,
     tag: 'Data Visualization',
+    role: 'Full Stack',
+    roleNote: 'Built with Next.js',
     title: 'Carbon Footprint Tracker',
-    description: [
-      'Developed a comprehensive data visualization platform designed to calculate and analyze carbon emissions for educational institutions. The application transforms complex environmental data into actionable insights through dynamic charts and automated professional reporting.',
-      'It features real-time URL state synchronization, dynamic data charts, and a custom PDF engine for professional sustainability reporting. Collaboration with UNCPBA — Faculty of Exact Sciences.',
-    ],
+    description:
+      'A comprehensive data visualization platform to calculate and analyze carbon emissions for educational institutions. Transforms complex environmental data into actionable insights through dynamic charts and automated professional reporting. Collaboration with UNCPBA — Faculty of Exact Sciences.',
+    techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'jsPDF', 'PostgreSQL'],
     image: '/carbon.png',
     imageAlt: 'Carbon Footprint Tracker — dashboard showing emission analysis for educational institutions',
-    imageLeft: false,
   },
 ]
 
 function ProjectCard({ project }) {
   return (
-    <article className="grid grid-cols-12 gap-6 items-center">
-      {/* Text — 5 cols, order swaps on mobile */}
-      <div
-        className={`col-span-12 lg:col-span-5 flex flex-col justify-center
-          ${project.imageLeft
-            ? 'order-2 lg:order-2 lg:pl-10'
-            : 'order-2 lg:order-1 lg:pr-10'
-          }`}
-      >
-        <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold tracking-widest uppercase mb-4 w-fit">
-          {project.tag}
+    <article className="group bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0_4px_20px_-5px_rgba(99,102,241,0.08)] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+      {/* Image */}
+      <div className="aspect-video relative overflow-hidden bg-surface-container-low">
+        <img
+          src={project.image}
+          alt={project.imageAlt}
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute top-3 left-3 flex flex-col gap-1 items-start">
+          <span
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm ${
+              project.role === 'Full Stack'
+                ? 'bg-primary/90 text-on-primary'
+                : 'bg-secondary/90 text-on-secondary'
+            }`}
+          >
+            {project.role}
+          </span>
+          <span className="px-2 py-0.5 rounded-full text-[9px] font-medium tracking-wide bg-black/40 text-white/90 backdrop-blur-sm">
+            {project.roleNote}
+          </span>
         </div>
-        <h3 className="text-[36px] font-semibold text-on-surface mb-4 leading-[1.2] tracking-[-0.02em]">
-          {project.title}
-        </h3>
-        {project.description.map((para, i) => (
-          <p key={i} className="text-base text-on-surface-variant leading-relaxed mb-4 last:mb-0">
-            {para}
-          </p>
-        ))}
       </div>
 
-      {/* Image — 7 cols */}
-      <div
-        className={`col-span-12 lg:col-span-7 mb-6 lg:mb-0
-          ${project.imageLeft ? 'order-1 lg:order-1' : 'order-1 lg:order-2'}`}
-      >
-        <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-primary-fixed-dim/20 bg-surface-container-lowest">
-          <img
-            src={project.image}
-            alt={project.imageAlt}
-            className="w-full h-full object-cover object-top"
-          />
+      {/* Content */}
+      <div className="p-8">
+        <span className="inline-block bg-surface-container-high px-3 py-1 rounded-full text-primary text-[10px] font-semibold tracking-widest uppercase mb-4">
+          {project.tag}
+        </span>
+        <h3 className="text-2xl font-semibold text-on-surface tracking-tight leading-snug mb-3">
+          {project.title}
+        </h3>
+        <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
+          {project.description}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {project.techs.map((tech) => (
+            <span
+              key={tech}
+              className="bg-surface-container-high px-3 py-1 rounded-full text-primary text-[10px] font-semibold tracking-widest uppercase"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
       </div>
     </article>
@@ -67,11 +79,16 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   return (
-    <section id="work" className="py-24">
-      <h2 className="text-[38px] font-semibold text-on-surface tracking-[-0.02em] leading-tight mb-16">
-        Featured Projects
-      </h2>
-      <div className="flex flex-col gap-24">
+    <section id="projects" className="py-24 scroll-mt-16">
+      <div className="mb-16">
+        <h2 className="text-[38px] font-semibold text-on-surface tracking-[-0.02em] leading-tight mb-4">
+          Featured Projects
+        </h2>
+        <p className="text-base text-on-surface-variant max-w-xl">
+          A selection of recent projects that showcase my technical expertise and problem-solving approach.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
