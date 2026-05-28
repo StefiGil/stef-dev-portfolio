@@ -6,7 +6,7 @@ const technologies = [
   // Frontend & UI
   'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Vite',
   // Backend & DB
-  'Node.js', 'Spring Boot', 'Java', 'PostgreSQL', 'MySQL',
+  'Node.js', 'Prisma', 'Spring Boot', 'Java', 'PostgreSQL', 'MySQL',
   // Tools & OS
   'Docker', 'Linux', 'Git/GitHub', 'Postman'
 ];
@@ -104,30 +104,39 @@ export default function App() {
         <section id="home" className="relative isolate overflow-hidden bg-[#fbfaff] scroll-mt-16">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_88%_0%,rgba(70,72,212,0.24)_0%,rgba(124,119,255,0.18)_24%,rgba(224,225,255,0.42)_42%,rgba(251,250,255,0)_70%)]" />
           <div className={`${C} pt-24 pb-32`}>
-            <div className="max-w-3xl">
-              <span className="inline-block py-1 px-3 rounded-full bg-surface-container-high text-primary text-[12px] font-semibold tracking-widest uppercase mb-6">
-                Available for new opportunities
-              </span>
-              <h1 className="text-[48px] font-bold text-on-surface leading-[1.1] tracking-[-0.02em] mb-6">
-                Full-Stack Developer. Creating modern solutions for real problem real problems.
-              </h1>
-              <p className="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
-                With over 2+ years of experience in building scalable web applications,
-                I bridge the gap between complex backend logic and intuitive frontend experiences.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="#projects"
-                  className="bg-primary text-on-primary px-8 py-4 rounded-xl text-sm font-semibold hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
-                >
-                  View My Work
-                </a>
-                <a
-                  href="#contact"
-                  className="border border-outline bg-white text-on-surface px-8 py-4 rounded-xl text-sm font-semibold hover:bg-surface-container-low transition-all duration-200"
-                >
-                  Get In Touch
-                </a>
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="flex-1">
+                <span className="inline-block py-1 px-3 rounded-full bg-surface-container-high text-primary text-[12px] font-semibold tracking-widest uppercase mb-6">
+                  Available for new opportunities
+                </span>
+                <h1 className="text-[38px] font-bold text-on-surface leading-[1.1] tracking-[-0.02em] mb-6">
+                  Full-Stack Developer. Creating modern solutions for real problem real problems.
+                </h1>
+                <p className="text-[18px] text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
+                  With over 2+ years of experience in building scalable web applications,
+                  I bridge the gap between complex backend logic and intuitive frontend experiences.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="#projects"
+                    className="bg-primary text-on-primary px-8 py-4 rounded-xl text-sm font-semibold hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+                  >
+                    View My Work
+                  </a>
+                  <a
+                    href="#contact"
+                    className="border border-outline bg-white text-on-surface px-8 py-4 rounded-xl text-sm font-semibold hover:bg-surface-container-low transition-all duration-200"
+                  >
+                    Get In Touch
+                  </a>
+                </div>
+              </div>
+              <div className="flex-shrink-0">
+                <img
+                  src="/perfil.png"
+                  alt="Stefania Gil"
+                  className="w-72 h-72 object-cover rounded-3xl shadow-xl"
+                />
               </div>
             </div>
           </div>

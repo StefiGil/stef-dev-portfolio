@@ -19,7 +19,7 @@ const projects = [
     title: 'Carbon Footprint Tracker',
     description:
       'A comprehensive data visualization platform to calculate and analyze carbon emissions for educational institutions. Transforms complex environmental data into actionable insights through dynamic charts and automated professional reporting. Collaboration with UNCPBA — Faculty of Exact Sciences.',
-    techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'jsPDF', 'PostgreSQL'],
+    techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'jsPDF', 'sheetJS', 'PostgreSQL'],
     image: '/carbon.png',
     imageAlt: 'Carbon Footprint Tracker — dashboard showing emission analysis for educational institutions',
   },
