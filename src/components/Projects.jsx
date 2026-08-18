@@ -1,9 +1,11 @@
+import { useState } from 'react'
+
 const projects = [
   {
     id: 2,
     tag: 'B2B Solutions',
     role: 'Frontend',
-    roleNote: 'Backend by another dev (Spring Boot)',
+    roleNote: 'Backend with Spring Boot',
     title: 'Sales Management Platform',
     description:
       'A centralized management platform for commercial workflows. It includes an interactive CRM with advanced filtering, a real-time inventory engine with automated stock alerts, and a transactional module featuring a split-view interface for simultaneous catalog browsing and order processing.',
@@ -25,9 +27,11 @@ const projects = [
   },
 ]
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, onImageClick }) {
   return (
-    <article className="group bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0_4px_20px_-5px_rgba(99,102,241,0.08)] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <article 
+      onClick={() => onImageClick(project)}
+      className="group bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0_4px_20px_-5px_rgba(99,102,241,0.08)] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer">
       {/* Image */}
       <div className="aspect-video relative overflow-hidden bg-surface-container-low">
         <img
@@ -78,6 +82,8 @@ function ProjectCard({ project }) {
 }
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null)
+
   return (
     <section id="projects" className="py-24 scroll-mt-16">
       <div className="mb-16">
@@ -90,9 +96,36 @@ export default function Projects() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} onImageClick={setSelectedProject} />
         ))}
       </div>
+
+      {/* Modal para imagen completa */}
+      {selectedProject && (
+        <div 
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4 overflow-y-auto"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div 
+            className="relative inline-block"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={selectedProject.image} 
+              alt={selectedProject.imageAlt}
+              className="w-auto h-auto max-h-[95vh] rounded-lg"
+            />
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
