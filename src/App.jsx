@@ -7,6 +7,8 @@ const technologies = [
   'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Vite',
   // Backend & DB
   'Node.js', 'Prisma', 'Spring Boot', 'Java', 'PostgreSQL', 'MySQL',
+  // AI-Assisted Development
+  'Claude', 'OpenAI Codex', 'GitHub Copilot', 'v0', 
   // Tools & OS
   'Docker', 'Linux', 'Git/GitHub', 'Postman'
 ];
@@ -89,8 +91,9 @@ export default function App() {
             ))}
           </nav>
           <a
-            href="/example.pdf"
-            download
+            href="https://drive.google.com/file/d/1iX_219qaa5SkApacvYsfLPCkNDo9sdZD/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
             className="bg-primary text-on-primary px-6 py-2 rounded-lg text-sm font-semibold hover:bg-primary-container transition-all active:scale-95 duration-100"
           >
             Resume
@@ -110,11 +113,14 @@ export default function App() {
                   Available for new opportunities
                 </span>
                 <h1 className="text-[38px] font-bold text-on-surface leading-[1.1] tracking-[-0.02em] mb-6">
-                  Full-Stack Developer. Creating modern solutions for real problem real problems.
+                Software Developer. Building modern software, AI, and automation solutions for real-world problems.
                 </h1>
                 <p className="text-[18px] text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
-                  With over 2+ years of experience in building scalable web applications,
-                  I bridge the gap between complex backend logic and intuitive frontend experiences.
+                I build modern web applications with a strong focus on frontend development,
+                using React, Next.js, and TypeScript, while also working across APIs, backend
+                services, and databases when needed. I also build workflow automations with
+                n8n and use AI-assisted development tools such as Claude and Codex to explore
+                solutions, accelerate development, and improve my engineering workflow.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a

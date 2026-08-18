@@ -9,7 +9,7 @@ const projects = [
     title: 'Sales Management Platform',
     description:
       'A centralized management platform for commercial workflows. It includes an interactive CRM with advanced filtering, a real-time inventory engine with automated stock alerts, and a transactional module featuring a split-view interface for simultaneous catalog browsing and order processing.',
-    techs: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    techs: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'v0'],
     image: '/sales-management.png',
     imageAlt: 'Sales Management Platform — dashboard showing CRM, inventory and order processing modules',
   },
@@ -21,7 +21,7 @@ const projects = [
     title: 'Carbon Footprint Tracker',
     description:
       'A comprehensive data visualization platform to calculate and analyze carbon emissions for educational institutions. Transforms complex environmental data into actionable insights through dynamic charts and automated professional reporting. Collaboration with UNCPBA — Faculty of Exact Sciences.',
-    techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'jsPDF', 'sheetJS', 'PostgreSQL'],
+    techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'jsPDF', 'sheetJS', 'PostgreSQL', 'Claude', 'Codex'],
     image: '/carbon.png',
     imageAlt: 'Carbon Footprint Tracker — dashboard showing emission analysis for educational institutions',
   },
